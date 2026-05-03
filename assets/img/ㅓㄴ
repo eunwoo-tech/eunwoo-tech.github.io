@@ -1,0 +1,9 @@
+const author = "이상";
+const title = "날개";
+const year = 1936;
+const today = today - year;
+const yearPassed = today - year;
+
+console.log(
+    `안녕하세요! ${author}의 ${title} ${year}년에 발표되었습니다. 오늘은 발표된 지 ${yearPassed}년이 지났습니다.` + `페이지에 오신 것을 환영합니다!'`
+);
