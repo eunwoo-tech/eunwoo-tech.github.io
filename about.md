@@ -6,14 +6,9 @@ title: "소개"
 # 자기소개
 
 안녕하세요! 저는 서울대학교 학부대학 자유전공학부에 재학 중인 학생입니다. **기계공학전공**을 공부하고 있습니다.
+---
 
-## 이 사이트에 대하여
-
-이 사이트는 **인문데이터과학개론** 수업에서 HTML, CSS, JavaScript, Jekyll을 배우며 만들고 있습니다.
-
-<script rcs= "assests/js/hello.js"></script>
-
-평소 소설책을 자주 읽고 좋아하는 작가는 **온다 리쿠**입니다. 아래는 이 작가의 위키백과 링크과 추천하고자 하는 도서 목록입니다.
+저는 평소 소설책을 자주 읽고 좋아하는 작가는 **온다 리쿠**입니다. 아래는 이 작가의 위키백과 링크과 추천하고자 하는 도서 목록입니다.
 
 [온다 리쿠 위키백과](https://ko.wikipedia.org/wiki/%EC%98%A8%EB%8B%A4_%EB%A6%AC%EC%BF%A0)
 
@@ -25,5 +20,9 @@ title: "소개"
 
 ---
 
-<script src="/assets/js/hello.js"></scripts>
+## 이 사이트에 대하여
+
+이 사이트는 **인문데이터과학개론** 수업에서 HTML, CSS, JavaScript, Jekyll을 배우며 만들고 있습니다.
+
+<script src="/assets/js/hello.js"></script>
 
