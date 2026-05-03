@@ -1,6 +1,6 @@
 ---
 layout: page
-title: elements for happiness
+title: 행복
 ---
 
 행복한 삶을 살기 위해 필요한 요소는 무엇일까
