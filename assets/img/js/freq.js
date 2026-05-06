@@ -1,5 +1,3 @@
-// assets/img/js/freq.js
-assets/img/js/freq.js
 function countChar(text, target) {
     let count = 0;
     for (const ch of text) {
