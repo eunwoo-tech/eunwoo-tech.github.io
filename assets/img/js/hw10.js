@@ -1,5 +1,7 @@
 // [숙제10] JavaScript 기초 연습
 // 2025-13198 김은우
+// Gemini로 작성된 코드입니다.
+[gemini 대화 링크](https://gemini.google.com/share/2108fd47d318)
 
 // Q1
 function classifyEra(year) {
