@@ -5,7 +5,7 @@ function countChar(text, target) {
         if (ch === target)  count++;
         
     }   
-    return count
+    return count;
 }
 
 const form = document.querySelector('#freq-form');
