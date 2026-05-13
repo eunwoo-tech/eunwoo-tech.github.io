@@ -13,4 +13,4 @@ permalink: /freq-app/
 </form>
 <ul id="freq-list"><ul>
 <p id="top-char"></p>
-<script src="/assets/js/img/freq=app.js"
+<script src="/assets/js/img/freq=app.js"></script>
