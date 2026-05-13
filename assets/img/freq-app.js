@@ -15,11 +15,11 @@ const targetBox = document.querySelector('#target-input');
 const topBox = document.querySelector('#top-char');
 
 
-form.addEventListener('submit', (e) => {
+form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const text = textBox.value;
-    const targets = targetBox.value.split(',').map(s => s.trim());
+    const targets = targetBox.value.split(",").map(s => s.trim());
     const counts = targets.map(t => countChar(text, t));
 
     drawList(targets, counts);
@@ -28,9 +28,9 @@ form.addEventListener('submit', (e) => {
 
 function drawList(targets, counts) {
     list.textContent = "";
-    for(let i = 0; i < targets.length; i++) {
+    for (let i = 0; i < targets.length; i++) {
         const li = document.createElement('li');
-        li.textContent = `${targets[i]}: ${counts[i]}번`;
+        li.textContent = `'${targets[i]}': ${counts[i]}번`;
         list.appendChild(li);
     }
 }
@@ -38,7 +38,7 @@ function drawList(targets, counts) {
 function drawTop(targets, counts) {
     let maxIdx = 0;
     for (let i = 1; i < counts.length; i++) {
-    if (counts[i] > counts[maxIdx]) maxIdx = i;   
+        if (counts[i] > counts[maxIdx]) maxIdx = i;   
     }
     topBox.textContent =
         `가장 자주 나온 글자: ${targets[maxIdx]} (${counts[maxIdx]}번)`;
