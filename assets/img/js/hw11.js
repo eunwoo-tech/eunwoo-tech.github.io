@@ -22,7 +22,7 @@ input.addEventListener('input', (e) => {
     const currentLength = e.target.value.length;
     count.textContent = currentLength;
 
-    if (currentLength > 100) {
+    if (currentLength > 99) {
         warn.textContent = '100자를 넘었습니다.';
         warn.style.color = 'crimson';
     } else {
