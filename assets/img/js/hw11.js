@@ -9,7 +9,7 @@ themeBtn.addEventListener('click', () => {
     if (q1Box.classList.contains('dark')) {
         themeBtn.textContent = '라이트 모드';
     } else {
-        themeBtn.textContent = '다크 몯';
+        themeBtn.textContent = '다크 모드';
     }   
 });
 
