@@ -11,4 +11,4 @@ permalink: /work-app/
 <ul id="freq-list"></ul>
 <p id="top-char"></p>
 
-<script src="/assets/js/img/works-app.js"></script>
+<script src="/assets/img/js/works-app.js"></script>
