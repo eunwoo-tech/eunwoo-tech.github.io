@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 작품별 글자 빈도
-permalink: /work-app/
+permalink: /works-app/
 ---
 
 <h2>작품을 골라보세요</h2>
