@@ -1,15 +1,15 @@
-// assets/js/img/works-app.js
+// assets/img/js/works-app.js
 
 function countChar(text, target) {
     let count = 0;
-    for ( const ch of text) {
+    for (const ch of text) {
         if (ch === target) count++;
     }
     return count;
-
 }
 
 const targets = ["이", "의" , "는", "가", "을"];
+
 
 const btnBox = document.querySelector('#work-buttons');
 const nowBox = document.querySelector('#now-showing');
@@ -32,7 +32,7 @@ function analyze(work) {
         .then(response => response.text())
         .then(text => {
             nowBox.textContent = `[${work.title}] 분석 결과`;
-            const counts = targets.map(target => countChar(text, t));
+            const counts = targets.map(t => countChar(text, t));
             drawList(targets, counts);
             drawTop(targets, counts);
         });
