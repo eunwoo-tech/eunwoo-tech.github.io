@@ -29,19 +29,19 @@ datasets: [{
         "rgba(255, 206, 86, 0.6)",
         "rgba(75, 192, 192, 0.6)",
     ],
-}]
+}],
 
 new Chart(canvas, {
     type: "bar",
     data: { },
     options: {
         plugins: {
-            title: { display: true, text: "한국 현대시인 작품 편수"},
-            legend: { display: true},
+            title: { display: true, text: "작가별 작품 편수" },
+            legend: { display: true },
         },
         scales: {
-            y: { beginAtZero: true, title: { display: true, text: "작품 편수" } },
-            x: { title: { display: true, text: "작가" } },
+            y: { beginAtZero: true, title: { display: true, text: "편수" } },
+            x: {                    title: { display: true, text: "작가" } },
         },
     },
 });

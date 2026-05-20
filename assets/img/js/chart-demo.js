@@ -11,7 +11,7 @@ new Chart(canvas, {
     },
 });
 
-fetch("/data/poems-csv")
+fetch("/data/poems.csv")
     .then(response => response.text())
     .then(csv => {
         const data = csv
@@ -38,7 +38,7 @@ function drawChart(rows) {
         type: "bar",
         data: {
             labels: labels,
-            datasets: [{label: "작품 편수", data: counts }],
+            datasets: [{ label: "작품 편수", data: counts }],
         },
     });
 }
