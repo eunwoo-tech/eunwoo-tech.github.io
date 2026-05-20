@@ -37,3 +37,16 @@ fetch("/data/poems-csv")
             }],
         },
     });
+
+new Chart(canvas, {
+    type: "line",
+    data: {
+        labels: rows.map(r => r.year),
+        datasets: [{
+            label: "작품 편수",
+            data: rows.map(r => r.count),
+        }],
+    },
+});
+
+/
