@@ -6,7 +6,7 @@ new Chart(canvas, {
         labels: ["김소월", "이상", "윤동주"],
         datasets: [{
             label: "작품 수",
-            data: [3, 5, 2]
+            data: [3, 5, 2],
         }],
     },
 });
