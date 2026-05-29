@@ -34,7 +34,7 @@ fetch("/data/sillok.json")
       }
     });
   });
-  
+
 // Q2
 fetch("/data/nobel-literature.csv")
     .then(response => response.text())
@@ -46,8 +46,8 @@ fetch("/data/nobel-literature.csv")
             .map(line => {
                 const cols = line.split(",");
                 return {
-                decade: Number(cols[0]),
-                count: Number(cols[1]),
+                    decade: Number(cols[0]),
+                    count: Number(cols[1]),
                 };
             });
 
