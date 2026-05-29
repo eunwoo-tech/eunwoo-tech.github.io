@@ -1,9 +1,6 @@
 // [숙제12] 인문학 데이터 시각화
 // 2025-13198 김은우
 
-// [숙제12] 인문학 데이터 시각화
-// 0000-00000 김인문 
-
 // Q1
 fetch("/data/sillok.json")
   .then(response => response.json())
