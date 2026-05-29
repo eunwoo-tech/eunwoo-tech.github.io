@@ -5,7 +5,7 @@
 fetch("/data/sillok.json")
   .then(response => response.json())
   .then(records => {
-    const labels = records.map(r => r.king);
+    const labels = records.map(r => r.king); // gemini 자동완성
     const counts = records.map(r => r.volumes);
 
     const canvas = document.querySelector("#q1-chart");
@@ -90,3 +90,5 @@ fetch("/data/nobel-literature.csv")
       }
     });
   });
+
+// gemini 링크 https://gemini.google.com/share/300071987bc8
