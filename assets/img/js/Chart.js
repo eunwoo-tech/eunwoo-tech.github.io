@@ -65,7 +65,7 @@ Promise.all([
     const draculaTop = analyze(draculaText, stopwords);
     const frankensteinTop = analyze(frankensteinText, stopwords);
     drawChart("#chart-dracula", draculaTop, "rgba(220, 53, 69, 0.6)");
-    drawChart("#chart-frankenstein", frankensteinTop, "rgba(54, 162, 235, 0.6)");
+    drawChart("#chart-frankenstein", frankensteinTop, "rgba(39, 142, 51, 0.6)");
 });
 
 // 종합: text ---> 상위 n개 
