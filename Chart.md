@@ -8,11 +8,11 @@ permalink: /Chart/
 <div style="display: flex; gap: 1em;">
     <div style="flex: 1;">
         <h3>Dracula</h3>
-        <div style="height: 500px;"><canvas id="chart-Dracula"></canvas></div>
+        <div style="height: 500px;"><canvas id="chart-dracula"></canvas></div>
     </div>
     <div style="flex: 1;">
         <h3>Frankenstein</h3>
-        <div style="height: 500px;"><canvas id="chart-Frankenstein"></canvas></div>
+        <div style="height: 500px;"><canvas id="chart-frankenstein"></canvas></div>
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

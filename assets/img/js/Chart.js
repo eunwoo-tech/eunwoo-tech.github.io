@@ -56,8 +56,8 @@ function topN(counts, n) { // counts: 객체
 }
 
 Promise.all([
-    fetch("/data/Dracula.txt").then(r => r.text()),
-    fetch("/data/Frankenstein.txt").then(r => r.text()),
+    fetch("/data/dracula.txt").then(r => r.text()),
+    fetch("/data/frankenstein.txt").then(r => r.text()),
     fetch("/data/stopwords-en.txt").then(r => r.text()),
 ]).then(([draculaText, frankensteinText, stopwordsText]) => {
     const stopwords = stopwordsText.split(/\s+/)
