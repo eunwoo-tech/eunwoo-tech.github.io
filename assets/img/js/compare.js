@@ -54,6 +54,7 @@ function topN(counts, n) { // counts: 객체
         .sort((a, b) => b[1] - a[1]) // 빈도수 내림차순 정렬
         .slice(0, n) // 상위 n개 선택
 }
+
 Promise.all([
     fetch("/data/scarlet.txt").then(r => r.text()),
     fetch("/data/hound.txt").then(r => r.text()),
@@ -68,3 +69,26 @@ Promise.all([
 });
 
 // 종합: text ---> 상위 n개 
+
+function drawChart(selector, top, color) {
+    const canvas = document.querySelector(selector);
+    new Chart(canvas, {
+        type: "bar",
+        data: {
+            labels: top.map(item => item[0]),
+            datasets: [{
+                label: "빈도", data: top.map(item => item[1]),
+                backgroundColor: color,
+            }],
+        },
+        options: {
+            indexAxis: "y", 
+            maintainAspectRatio: false,
+            scales: {
+                x: { beginAtZero: true },
+                y: { ticks: { autoSkip: false } },
+            },
+        },
+    });
+}
+            
