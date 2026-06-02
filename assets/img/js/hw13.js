@@ -1,3 +1,8 @@
+// [숙제13] 텍스트 분석 도구 구현
+// 2025-13198 김은우
+
+// --- 함수 정의들 ---
+
 function extractBody(text) {
     const startMark = "*** START OF THE PROJECT GUTENBERG EBOOK";
     const endMark   = "*** END OF THE PROJECT GUTENBERG EBOOK";
@@ -49,24 +54,24 @@ function analyze(text, stopwords) {
 }
 
 
-function topN(counts, n) { // counts: 객체
-    return Object.entries(counts) // 객체 -> 배열로 전환
-        .sort((a, b) => b[1] - a[1]) // 빈도수 내림차순 정렬
-        .slice(0, n) // 상위 n개 선택
-}
 
 Promise.all([
-    fetch("/data/dracula.txt").then(r => r.text()),
     fetch("/data/frankenstein.txt").then(r => r.text()),
+    fetch("/data/dracula.txt").then(r => r.text()),
     fetch("/data/stopwords-en.txt").then(r => r.text()),
-]).then(([draculaText, frankensteinText, stopwordsText]) => {
+]).then(([frankensteinText, draculaText, stopwordsText]) => {
     const stopwords = stopwordsText.split(/\s+/)
     .filter(w => w.length > 0);
-    const draculaTop = analyze(draculaText, stopwords);
     const frankensteinTop = analyze(frankensteinText, stopwords);
-    drawChart("#chart-dracula", draculaTop, "rgba(220, 53, 69, 0.6)");
+    const draculaTop = analyze(draculaText, stopwords);
     drawChart("#chart-frankenstein", frankensteinTop, "rgba(39, 142, 51, 0.6)");
+    drawChart("#chart-dracula", draculaTop, "rgba(220, 53, 69, 0.6)");
+
 });
+
+const frankTop = analyze(frankText, stopwords);
+const dracTop = analyze(dracText, stopwords);
+
 
 // 종합: text ---> 상위 n개 
 

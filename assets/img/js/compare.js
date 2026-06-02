@@ -83,7 +83,7 @@ function drawChart(selector, top, color) {
         },
         options: {
             indexAxis: "y", 
-            maintainAspectRatio: false,
+            maintainAspectRatio: false, // 비율 보존 안 함 -> 아래로 긴 그림 그릴 수 있게 함
             scales: {
                 x: { beginAtZero: true },
                 y: { ticks: { autoSkip: false } },
