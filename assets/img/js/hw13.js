@@ -59,11 +59,13 @@ Promise.all([
     fetch("/data/frankenstein.txt").then(r => r.text()),
     fetch("/data/dracula.txt").then(r => r.text()),
     fetch("/data/stopwords-en.txt").then(r => r.text()),
-]).then(([frankensteinText, draculaText, stopwordsText]) => {
-    const stopwords = stopwordsText.split(/\s+/)
-    .filter(w => w.length > 0);
-    const frankensteinTop = analyze(frankensteinText, stopwords);
-    const draculaTop = analyze(draculaText, stopwords);
+    fetch("/data/stopwords-custom.txt").then(r => r.text()),
+]).then(([frankText, dracText, baseStop, customStop]) => {
+    const stopwords = (baseStop + "\n" + customStop)
+        .split(/\s+/)
+        .filter(w => w.length > 0);
+    const frankensteinTop = analyze(frankText, stopwords);
+    const draculaTop = analyze(dracText, stopwords);
     drawChart("#chart-frankenstein", frankensteinTop, "rgba(39, 142, 51, 0.6)");
     drawChart("#chart-dracula", draculaTop, "rgba(220, 53, 69, 0.6)");
 
