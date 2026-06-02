@@ -68,11 +68,11 @@ Promise.all([
     const draculaTop = analyze(dracText, stopwords);
     drawChart("#chart-frankenstein", frankensteinTop, "rgba(39, 142, 51, 0.6)");
     drawChart("#chart-dracula", draculaTop, "rgba(220, 53, 69, 0.6)");
-
+    const frankTop = analyze(frankText, stopwords);
+    const dracTop = analyze(dracText, stopwords);
 });
 
-const frankTop = analyze(frankText, stopwords);
-const dracTop = analyze(dracText, stopwords);
+
 
 
 // 종합: text ---> 상위 n개 
