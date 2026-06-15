@@ -7,27 +7,29 @@ function getWords(text) {
 }
 
 
-function drawChart(selector, top, color) {
-    const canvas = document.querySelector(selector);
-    new Chart(canvas, {
-        type: "bar",
+// Gemini가 작성한 코드입니다. https://gemini.google.com/app/0f92461f14d6b461?pageId=none
+function drawChart(canvasId, labelArray, dataArray) {
+    const ctx = document.getElementById(canvasId).getContext('2d');
+    
+    // 차트 객체를 생성함과 동시에 return 합니다.
+    return new Chart(ctx, {
+        type: 'bar', // 과제에서 요구하는 막대그래프
         data: {
-            labels: top.map(item => item[0]),
+            labels: labelArray, // x축 데이터 (단어 배열)
             datasets: [{
-                label: "빈도", data: top.map(item => item[1]),
-                backgroundColor: color,
-            }],
+                label: '단어 빈도수',
+                data: dataArray, // y축 데이터 (빈도수 배열)
+                borderWidth: 1
+            }]
         },
         options: {
-            indexAxis: "y", 
-            maintainAspectRatio: false,
             scales: {
-                x: { beginAtZero: true },
-                y: { ticks: { autoSkip: false } },
-            },
-        },
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
     });
-    return new Chart();
 }
 
 function removeStopwords(words, stopwords) {
