@@ -8,17 +8,30 @@ function getWords(text) {
 
 
 // Gemini가 작성한 코드입니다. https://gemini.google.com/app/0f92461f14d6b461?pageId=none
-function drawChart(canvasId, labelArray, dataArray) {
-    const ctx = document.getElementById(canvasId).getContext('2d');
+function drawChart(canvasId, topNResult) {
+    // 1. topN 결과에서 라벨(단어)과 데이터(빈도수) 분리
+    const labelArray = topNResult.map(item => item[0]); 
+    const dataArray = topNResult.map(item => item[1]);
+
+    // 2. 캔버스 요소 찾기
+    const canvasElement = document.getElementById(canvasId);
     
-    // 차트 객체를 생성함과 동시에 return 합니다.
+    // 🔥 디버깅 방어선: 캔버스를 못 찾으면 콘솔에 이유를 띄우고 멈춤
+    if (!canvasElement) {
+        console.error(`"${canvasId}"라는 ID를 가진 캔버스를 HTML에서 찾을 수 없습니다!`);
+        return null;
+    }
+
+    const ctx = canvasElement.getContext('2d');
+    
+    // 3. 차트를 그리고 객체 반환 [cite: 48]
     return new Chart(ctx, {
-        type: 'bar', // 과제에서 요구하는 막대그래프
+        type: 'bar',
         data: {
-            labels: labelArray, // x축 데이터 (단어 배열)
+            labels: labelArray,
             datasets: [{
                 label: '단어 빈도수',
-                data: dataArray, // y축 데이터 (빈도수 배열)
+                data: dataArray,
                 borderWidth: 1
             }]
         },
