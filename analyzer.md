@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Text Analyzer
+title: analyzer
 permalink: /analyzer/
 ---
 
