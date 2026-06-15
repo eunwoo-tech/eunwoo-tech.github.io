@@ -25,16 +25,16 @@ function analyze(text, stopwords) {
 
 
 Promise.all([
-    fetch("/data/scarlet.txt").then(r => r.text()),
-    fetch("/data/hound.txt").then(r => r.text()),
+    fetch("/data/Frankenstein.txt").then(r => r.text()),
+    fetch("/data/Dracula.txt").then(r => r.text()),
     fetch("/data/stopwords-en.txt").then(r => r.text()),
-]).then(([scarletText, houndText, stopwordsText]) => {
+]).then(([frankensteinText, draculaText, stopwordsText]) => {
     const stopwords = stopwordsText.split(/\s+/)
     .filter(w => w.length > 0);
-    const scarletTop = analyze(scarletText, stopwords);
-    const houndTop = analyze(houndText, stopwords);
-    drawChart("#chart-scarlet", scarletTop, "rgba(220, 53, 69, 0.6)");
-    drawChart("#chart-hound", houndTop, "rgba(54, 162, 235, 0.6)");
+    const frankensteinTop = analyze(frankensteinText, stopwords);
+    const draculaTop = analyze(draculaText, stopwords);
+    drawChart("#chart-frankenstein", frankensteinTop, "rgba(220, 53, 69, 0.6)");
+    drawChart("#chart-dracula", draculaTop, "rgba(54, 162, 235, 0.6)");
 });
 
 // 종합: text ---> 상위 n개 
