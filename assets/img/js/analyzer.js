@@ -1,7 +1,7 @@
 let resultChart = null; 
 let stopwords = [];
 
-fetch('/assets/data/stopwords-en.txt')
+fetch('/assets/img/data/stopwords-en.txt')
   .then(response => response.text())
   .then(text => {
       stopwords = getWords(text); 
