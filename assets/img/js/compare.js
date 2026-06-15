@@ -33,8 +33,8 @@ Promise.all([
     .filter(w => w.length > 0);
     const scarletTop = analyze(scarletText, stopwords);
     const houndTop = analyze(houndText, stopwords);
-    drawChart("#chart-scarlet", scarletTop, "rgba(220, 53, 69, 0.6)");
-    drawChart("#chart-hound", houndTop, "rgba(54, 162, 235, 0.6)");
+    drawChart("chart-scarlet", scarletTop, "rgba(220, 53, 69, 0.6)");
+    drawChart("chart-hound", houndTop, "rgba(54, 162, 235, 0.6)");
 });
 
 // 종합: text ---> 상위 n개 

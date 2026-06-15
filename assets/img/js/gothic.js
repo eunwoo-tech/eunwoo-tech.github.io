@@ -33,8 +33,8 @@ Promise.all([
     .filter(w => w.length > 0);
     const frankensteinTop = analyze(frankensteinText, stopwords);
     const draculaTop = analyze(draculaText, stopwords);
-    drawChart("#chart-frankenstein", frankensteinTop, "rgba(220, 53, 69, 0.6)");
-    drawChart("#chart-dracula", draculaTop, "rgba(54, 162, 235, 0.6)");
+    drawChart("chart-frankenstein", frankensteinTop, "rgba(220, 53, 69, 0.6)");
+    drawChart("chart-dracula", draculaTop, "rgba(54, 162, 235, 0.6)");
 });
 
 // 종합: text ---> 상위 n개 
