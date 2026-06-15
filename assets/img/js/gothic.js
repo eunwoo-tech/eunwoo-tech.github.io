@@ -25,8 +25,8 @@ function analyze(text, stopwords) {
 
 
 Promise.all([
-    fetch("/data/Frankenstein.txt").then(r => r.text()),
-    fetch("/data/Dracula.txt").then(r => r.text()),
+    fetch("/data/frankenstein.txt").then(r => r.text()),
+    fetch("/data/dracula.txt").then(r => r.text()),
     fetch("/data/stopwords-en.txt").then(r => r.text()),
 ]).then(([frankensteinText, draculaText, stopwordsText]) => {
     const stopwords = stopwordsText.split(/\s+/)
