@@ -11,5 +11,5 @@ permalink: /analyzer/
 <canvas id="resultCanvas"></canvas>
 
 {% include chartjs.html %}
-<script src="/assets/js/analysis.js"></script>
-<script src="/assets/js/analyzer.js"></script>
+<script src="/assets/img/js/analysis.js"></script>
+<script src="/assets/img/js/analyzer.js"></script>

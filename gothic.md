@@ -18,4 +18,4 @@ permalink: /gothic/
 
 {% include chartjs.html %}
 <script src="/assets/img/js/analysis.js"></script>
-<script src="/assets/img/js/compare.js"></script>
+<script src="/assets/img/js/gothic.js"></script>
